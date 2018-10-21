@@ -1,3 +1,17 @@
+# Jenkins
+
+Create two VMs, one master, one slave. Follow this guide to set them up:
+
+https://wiki.jenkins.io/pages/viewpage.action?pageId=75893612
+
+Ensure to label the slave with `tensorflow`, then in your builds you can pass them to the tensorflow agent with the tensorflow label.
+
+If in doubt, check the jenkins set up in AWS. (bring them online as they are currently switched off)
+
+See [Jenkinsfile](Jenkinsfile) for a simple example of how to label a job to a particular executor/agent.
+
+Then on the slave set up tensorflow:
+
 # Tensorflow
 
 OS: Ubuntu 14.04 or 16.04 LTS
